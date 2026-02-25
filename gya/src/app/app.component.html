@@ -16,8 +16,32 @@
     </div>
   </section>
 
+  <section class="text-gray-600 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap w-full mb-20">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Archives</h1>
+        <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+      </div>
+      <p class="lg:w-1/2 sm:text-2xl text-xl w-full leading-relaxed text-gray-500">Sport is society in motion: it teaches discipline without coercion, unity without uniformity, and dignity in both victory and defeat.</p>
+    </div>
+    <div class="flex flex-wrap -m-4">
+      @for (item of imagesUrls; track $index) {
+        <div class="xl:w-2/4 md:w-1/2 p-4">
+          <div class="bg-gray-100 p-6 rounded-lg">
+            <img class="h-82 rounded w-full object-cover object-center mb-6" [src]="'assets/images/football/' + item.image" [alt]="item.title">
+            <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">FOOTBALL</h3>
+            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">{{ item.title }}</h2>
+            <p class="leading-relaxed text-base">{{ item.description }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
   <!-- Stats Section -->
-  <section class="py-24 px-6 md:px-12 bg-gradient-to-r from-slate-50 to-white">
+  <!-- <section class="py-24 px-6 md:px-12 bg-gradient-to-r from-slate-50 to-white">
     <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
       <div>
         <div class="text-5xl md:text-6xl font-bold text-purple-600 mb-4">$500M</div>
@@ -32,7 +56,7 @@
         <p class="text-xl font-medium">member-led activity vs. 20% for other platforms</p>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Mighty Difference Cards -->
   <section class="py-32 px-6 md:px-12">
